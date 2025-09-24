@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
 
 /**
@@ -14,11 +13,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function Card({ children, hover = false, className, ...props }: CardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.2, ease: 'easeOut' }}
-      whileHover={hover ? { scale: 1.01 } : undefined}
+    <div
       className={cn(
         'card',
         hover && 'card-hover',
@@ -27,7 +22,7 @@ export function Card({ children, hover = false, className, ...props }: CardProps
       {...props}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 

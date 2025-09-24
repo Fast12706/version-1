@@ -176,23 +176,23 @@ export default function ServicesPage() {
             <p className="text-muted mb-8 max-w-md mx-auto">
               This specialty doesn't have any available services yet.
             </p>
-            <Button asChild>
-              <Link href="/">
+            <Link href="/">
+              <Button>
                 Back to Home
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </motion.div>
         )}
       </motion.div>
 
       {/* Back Button */}
       <motion.div variants={itemVariants} className="text-center">
-        <Button variant="secondary" asChild>
-          <Link href="/">
+        <Link href="/">
+          <Button variant="secondary">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Specialties
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </motion.div>
     </motion.div>
   );

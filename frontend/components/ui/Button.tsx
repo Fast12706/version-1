@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
 
 /**
@@ -37,10 +36,7 @@ export function Button({
   };
 
   return (
-    <motion.button
-      whileHover={{ scale: disabled || loading ? 1 : 1.02 }}
-      whileTap={{ scale: disabled || loading ? 1 : 0.98 }}
-      transition={{ duration: 0.2, ease: 'easeOut' }}
+    <button
       disabled={disabled || loading}
       className={cn(
         baseClasses,
@@ -54,7 +50,7 @@ export function Button({
         <div className="spinner mr-2" />
       )}
       {children}
-    </motion.button>
+    </button>
   );
 }
 

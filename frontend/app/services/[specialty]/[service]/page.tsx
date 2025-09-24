@@ -296,18 +296,18 @@ export default function ServiceFormPage() {
 
       {/* Navigation Buttons */}
       <motion.div variants={itemVariants} className="flex justify-between">
-        <Button variant="secondary" asChild>
-          <Link href={`/services/${specialty}`}>
+        <Link href={`/services/${specialty}`}>
+          <Button variant="secondary">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Services
-          </Link>
-        </Button>
-        <Button asChild>
-          <Link href="/history">
+          </Button>
+        </Link>
+        <Link href="/history">
+          <Button>
             View History
             <ArrowRight className="h-4 w-4 ml-2" />
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </motion.div>
     </motion.div>
   );
