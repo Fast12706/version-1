@@ -1,18 +1,12 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/.next",
-  "framework": "nextjs",
-  "functions": {
-    "backend/src/server.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "routes": [
+  "builds": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/src/server.ts"
-    },
+      "src": "frontend/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
     {
       "src": "/(.*)",
       "dest": "frontend/$1"
